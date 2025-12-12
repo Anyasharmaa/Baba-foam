@@ -1,0 +1,2042 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BABAFOAMS — Premium Mattresses Direct to You</title>
+    <meta name="description" content="Order premium mattresses directly from BABAFOAMS. Quality foam mattresses with warranty, delivered to your doorstep.">
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ============================================
+           BABAFOAMS — COMPLETE CSS
+           Palette: #9FBCCC, #7A9CC6, #BDE4A7, #F8FAFB, #1C1C1C
+        ============================================ */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #7A9CC6;
+            --primary-light: #9FBCCC;
+            --mint: #BDE4A7;
+            --bg: #F8FAFB;
+            --text: #1C1C1C;
+            --card: #FFFFFF;
+            --yellow: #FFFD98;
+            --shadow: 0 4px 20px rgba(28, 28, 28, 0.08);
+            --shadow-hover: 0 12px 40px rgba(28, 28, 28, 0.15);
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* ============ HEADER ============ */
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--card);
+            box-shadow: var(--shadow);
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        .logo-placeholder {
+            width: 100%;
+            height: 100%;
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            color: white;
+            font-size: 14px;
+            border-radius: 12px;
+        }
+        
+        .brand-title {
+            font-weight: 900;
+            font-size: 1.3rem;
+            letter-spacing: 2px;
+            color: var(--text);
+        }
+        
+        .nav-menu {
+            display: none;
+            gap: 24px;
+        }
+        
+        @media (min-width: 768px) {
+            .nav-menu {
+                display: flex;
+            }
+        }
+        
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        
+        .nav-menu a:hover {
+            color: var(--primary);
+        }
+        
+        .header-icons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .header-icons a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: transform 0.2s, background 0.2s;
+        }
+        
+        .header-icons a:hover {
+            transform: scale(1.1);
+            background: var(--text);
+        }
+        
+        .mobile-menu-btn {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+        
+        @media (min-width: 768px) {
+            .mobile-menu-btn {
+                display: none;
+            }
+        }
+        
+        .mobile-menu-btn span {
+            width: 24px;
+            height: 3px;
+            background: var(--text);
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+        
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 72px;
+            left: 0;
+            right: 0;
+            background: var(--card);
+            padding: 20px;
+            box-shadow: var(--shadow);
+            z-index: 999;
+        }
+        
+        .mobile-nav.active {
+            display: block;
+        }
+        
+        .mobile-nav a {
+            display: block;
+            padding: 12px 0;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 600;
+            border-bottom: 1px solid #eee;
+        }
+        
+        /* ============ HERO ============ */
+        .hero {
+            padding: 80px 20px 100px;
+            text-align: center;
+            background: var(--primary);
+            color: white;
+            position: relative;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -40px;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background: var(--primary);
+            clip-path: polygon(0 0, 100% 0, 100% 20%, 0 100%);
+        }
+        
+        .hero h1 {
+            font-size: clamp(3rem, 12vw, 6rem);
+            font-weight: 900;
+            letter-spacing: 8px;
+            line-height: 1;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        
+        .hero .tagline {
+            font-size: 1.2rem;
+            font-weight: 500;
+            opacity: 0.95;
+            margin-bottom: 40px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-ctas {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+        }
+        
+        @media (min-width: 600px) {
+            .hero-ctas {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+        
+        /* ============ BUTTONS ============ */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            font-family: inherit;
+        }
+        
+        .btn:active {
+            transform: scale(0.96);
+        }
+        
+        .btn-primary {
+            background: var(--card);
+            color: var(--text);
+        }
+        
+        .btn-primary:hover {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 3px solid white;
+            color: white;
+        }
+        
+        .btn-outline:hover {
+            background: white;
+            color: var(--text);
+        }
+        
+        .btn-cta {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .btn-cta:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--text);
+            color: var(--text);
+            padding: 10px 20px;
+            font-size: 0.9rem;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--text);
+            color: white;
+        }
+        
+        /* ============ SECTION TITLE ============ */
+        .section-title {
+            text-align: center;
+            padding: 80px 20px 40px;
+        }
+        
+        .section-title h2 {
+            font-size: clamp(2rem, 6vw, 3rem);
+            font-weight: 900;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--text);
+        }
+        
+        .section-title p {
+            margin-top: 12px;
+            color: #666;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .image-disclaimer {
+            text-align: center;
+            padding: 0 20px 20px;
+            font-size: 0.85rem;
+            color: #888;
+            font-style: italic;
+        }
+        
+        /* ============ PRODUCT GRID ============ */
+        .product-grid {
+            padding: 20px;
+            display: grid;
+            gap: 28px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        @media (min-width: 700px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 1100px) {
+            .product-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        /* ============ PRODUCT CARD ============ */
+        .product-card {
+            background: var(--card);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            opacity: 0;
+            animation: fadeInUp 0.6s ease forwards;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .product-card:nth-child(1) { animation-delay: 0.05s; }
+        .product-card:nth-child(2) { animation-delay: 0.1s; }
+        .product-card:nth-child(3) { animation-delay: 0.15s; }
+        .product-card:nth-child(4) { animation-delay: 0.2s; }
+        .product-card:nth-child(5) { animation-delay: 0.25s; }
+        .product-card:nth-child(6) { animation-delay: 0.3s; }
+        .product-card:nth-child(7) { animation-delay: 0.35s; }
+        .product-card:nth-child(8) { animation-delay: 0.4s; }
+        .product-card:nth-child(9) { animation-delay: 0.45s; }
+        .product-card:nth-child(10) { animation-delay: 0.5s; }
+        
+        .product-slider {
+            position: relative;
+            overflow: hidden;
+            touch-action: pan-y pinch-zoom;
+            background: var(--primary-light);
+            height: 220px;
+            cursor: grab;
+        }
+        
+        .product-slider:active {
+            cursor: grabbing;
+        }
+        
+        .slider-track {
+            display: flex;
+            transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            height: 100%;
+        }
+        
+        .slider-slide {
+            min-width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+        }
+        
+        .slider-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .slider-slide img.img-error {
+            object-fit: contain;
+            padding: 20px;
+            background: var(--primary-light);
+        }
+        
+        .slider-dots {
+            position: absolute;
+            bottom: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+        }
+        
+        .slider-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.4);
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s;
+            border: none;
+        }
+        
+        .slider-dot.active {
+            background: white;
+            transform: scale(1.3);
+        }
+        
+        .product-info {
+            padding: 24px;
+        }
+        
+        .product-name {
+            font-size: 1.4rem;
+            font-weight: 900;
+            margin-bottom: 6px;
+            letter-spacing: 1px;
+        }
+        
+        .product-material {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 12px;
+        }
+        
+        .product-price {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+        
+        .product-price span {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text);
+            opacity: 0.6;
+        }
+        
+        .product-features {
+            list-style: none;
+            margin-bottom: 16px;
+        }
+        
+        .product-features li {
+            font-size: 0.88rem;
+            padding: 5px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .product-features li::before {
+            content: "✓";
+            color: var(--mint);
+            font-weight: 900;
+            font-size: 1rem;
+        }
+        
+        .badges {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        
+        .badge {
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .badge-warranty {
+            background: var(--mint);
+            color: var(--text);
+        }
+        
+        .badge-highlight {
+            background: var(--yellow);
+            color: var(--text);
+        }
+        
+        .badge-foldable {
+            background: var(--primary-light);
+            color: var(--text);
+        }
+        
+        .card-buttons {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .card-buttons .btn {
+            flex: 1;
+            justify-content: center;
+            padding: 14px 16px;
+        }
+        
+        /* ============ ORDER PANEL ============ */
+        .order-panel {
+            display: none;
+            background: var(--bg);
+            padding: 20px;
+            border-top: 2px solid #eee;
+            animation: slideDown 0.3s ease;
+        }
+        
+        .order-panel.active {
+            display: block;
+        }
+        
+        @keyframes slideDown {
+            from { opacity: 0; max-height: 0; }
+            to { opacity: 1; max-height: 1000px; }
+        }
+        
+        .order-panel h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--primary);
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        
+        @media (min-width: 500px) {
+            .form-row-3 {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+        
+        .form-group {
+            margin-bottom: 12px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 6px;
+            font-size: 0.85rem;
+            color: var(--text);
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            background: white;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(122, 156, 198, 0.15);
+        }
+        
+        .payment-options {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+        
+        .payment-option {
+            flex: 1;
+            padding: 14px;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.2s;
+            background: white;
+        }
+        
+        .payment-option:hover {
+            border-color: var(--primary);
+        }
+        
+        .payment-option.active {
+            border-color: var(--primary);
+            background: var(--primary);
+            color: white;
+        }
+        
+        .payment-option input {
+            display: none;
+        }
+        
+        .payment-option strong {
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 2px;
+        }
+        
+        .payment-option small {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+        
+        .price-display {
+            background: white;
+            padding: 16px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 16px;
+            border: 2px solid var(--mint);
+        }
+        
+        .price-display .final-price {
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--primary);
+        }
+        
+        .price-display .original-price {
+            text-decoration: line-through;
+            color: #999;
+            margin-left: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .price-display .discount-badge {
+            display: inline-block;
+            background: var(--mint);
+            color: var(--text);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-top: 8px;
+        }
+        
+        .order-submit {
+            width: 100%;
+            padding: 16px;
+            font-size: 1rem;
+        }
+        
+        /* ============ ORDER PAGE OVERLAY ============ */
+        .order-page {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg);
+            z-index: 2000;
+            overflow-y: auto;
+        }
+        
+        .order-page.active {
+            display: block;
+            animation: slideIn 0.3s ease;
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+        
+        .order-header {
+            background: var(--primary);
+            color: white;
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        
+        .order-back {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        }
+        
+        .order-back:hover {
+            background: rgba(255,255,255,0.35);
+        }
+        
+        .order-product-title {
+            font-weight: 700;
+            font-size: 1.15rem;
+        }
+        
+        .order-content {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+        
+        .order-gallery {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            background: var(--primary-light);
+            height: 280px;
+            margin-bottom: 24px;
+            touch-action: pan-y pinch-zoom;
+            cursor: grab;
+        }
+        
+        .order-gallery:active {
+            cursor: grabbing;
+        }
+        
+        .order-form-section {
+            background: var(--card);
+            padding: 24px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            margin-bottom: 20px;
+        }
+        
+        .order-form-section h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text);
+        }
+        
+        .size-presets {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+        
+        @media (min-width: 500px) {
+            .size-presets {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        .size-preset {
+            padding: 12px 8px;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            background: white;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.2s;
+            font-size: 0.85rem;
+        }
+        
+        .size-preset:hover {
+            border-color: var(--primary);
+        }
+        
+        .size-preset.active {
+            border-color: var(--primary);
+            background: var(--primary);
+            color: white;
+        }
+        
+        .size-preset strong {
+            display: block;
+            font-size: 0.9rem;
+            margin-bottom: 2px;
+        }
+        
+        .delivery-section {
+            background: var(--bg);
+            padding: 16px;
+            border-radius: 12px;
+            margin-bottom: 16px;
+        }
+        
+        .delivery-section h4 {
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text);
+        }
+        
+        .delivery-estimate {
+            font-size: 0.95rem;
+            color: var(--text);
+            padding: 12px;
+            background: var(--mint);
+            border-radius: 10px;
+            font-weight: 600;
+            margin-top: 12px;
+        }
+        
+        .delivery-note {
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        
+        /* ============ POLICY SECTION ============ */
+        .policy-section {
+            background: var(--card);
+            padding: 80px 20px;
+            margin-top: 60px;
+        }
+        
+        .policy-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .policy-section h2 {
+            font-size: clamp(2rem, 5vw, 2.8rem);
+            font-weight: 900;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--text);
+        }
+        
+        .policy-block {
+            margin-bottom: 40px;
+            padding: 28px;
+            background: var(--bg);
+            border-radius: 16px;
+        }
+        
+        .policy-block h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .policy-block p,
+        .policy-block li {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+        
+        .policy-block ul {
+            padding-left: 24px;
+        }
+        
+        .policy-block ul li {
+            margin-bottom: 8px;
+        }
+        
+        .warranty-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 16px;
+            font-size: 0.95rem;
+        }
+        
+        .warranty-table th,
+        .warranty-table td {
+            padding: 14px 16px;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .warranty-table th {
+            background: var(--primary);
+            color: white;
+            font-weight: 700;
+        }
+        
+        .warranty-table tr:nth-child(even) {
+            background: rgba(159, 188, 204, 0.1);
+        }
+        
+        .warranty-table tr:hover {
+            background: rgba(159, 188, 204, 0.2);
+        }
+        
+        .policy-contact {
+            text-align: center;
+            padding: 30px;
+            background: var(--primary);
+            border-radius: 16px;
+            color: white;
+        }
+        
+        .policy-contact h3 {
+            color: white;
+            margin-bottom: 16px;
+        }
+        
+        .policy-contact a {
+            color: var(--yellow);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .policy-contact a:hover {
+            text-decoration: underline;
+        }
+        
+        /* ============ FOOTER ============ */
+        .footer {
+            background: var(--text);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        
+        .footer-brand {
+            font-size: 1.8rem;
+            font-weight: 900;
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-nav {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+        }
+        
+        .footer-nav a {
+            color: var(--primary-light);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .footer-nav a:hover {
+            color: white;
+        }
+        
+        .footer-contact {
+            margin-bottom: 24px;
+        }
+        
+        .footer-contact p {
+            margin: 8px 0;
+        }
+        
+        .footer-contact a {
+            color: var(--primary-light);
+            text-decoration: none;
+        }
+        
+        .footer-copy {
+            font-size: 0.85rem;
+            opacity: 0.6;
+            margin-top: 20px;
+        }
+        
+        /* ============ STICKY MOBILE CTA ============ */
+        .sticky-cta {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 16px 20px;
+            background: var(--card);
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+            z-index: 900;
+        }
+        
+        .sticky-cta.visible {
+            display: block;
+        }
+        
+        .sticky-cta .btn {
+            width: 100%;
+            justify-content: center;
+        }
+        
+        /* ============ TOAST ============ */
+        .toast {
+            position: fixed;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: var(--text);
+            color: white;
+            padding: 16px 28px;
+            border-radius: 14px;
+            font-weight: 600;
+            opacity: 0;
+            transition: all 0.35s;
+            z-index: 3000;
+            text-align: center;
+            max-width: 90%;
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+        
+        /* ============ CONFIRMATION ============ */
+        .confirmation {
+            display: none;
+            text-align: center;
+            padding: 50px 24px;
+        }
+        
+        .confirmation.active {
+            display: block;
+        }
+        
+        .confirmation-icon {
+            width: 90px;
+            height: 90px;
+            background: var(--mint);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 28px;
+            font-size: 2.8rem;
+        }
+        
+        .confirmation h2 {
+            font-size: 1.6rem;
+            margin-bottom: 14px;
+            color: var(--text);
+        }
+        
+        .confirmation p {
+            color: #666;
+            margin-bottom: 24px;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- =============================================
+         HEADER
+    ============================================= -->
+    <header class="header">
+        <div class="header-left">
+            <!-- REPLACE: Add your logo at /assets/logo.png -->
+            <div class="logo">
+                <img src="/assets/logo.png" alt="BabaFoams Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="logo-placeholder" style="display:none;">BF</div>
+            </div>
+            <div class="brand-title">BABAFOAMS</div>
+        </div>
+        
+        <nav class="nav-menu" aria-label="Main navigation">
+            <a href="#home">Home</a>
+            <a href="#catalogue">Catalogue</a>
+            <a href="#policy">Policy</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        
+        <div class="header-icons">
+            <a href="tel:9012039979" title="Call us" aria-label="Call us">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            </a>
+            <a href="https://wa.me/919012039979" target="_blank" title="WhatsApp" aria-label="WhatsApp">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+        </div>
+        
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+    
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <a href="#home" onclick="closeMobileMenu()">Home</a>
+        <a href="#catalogue" onclick="closeMobileMenu()">Catalogue</a>
+        <a href="#policy" onclick="closeMobileMenu()">Policy</a>
+        <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+    </nav>
+
+    <!-- =============================================
+         HERO SECTION
+    ============================================= -->
+    <section class="hero" id="home">
+        <h1>Sleep<br>Better</h1>
+        <p class="tagline">Premium foam mattresses crafted for your comfort. Factory-direct prices, delivered to your door.</p>
+        <div class="hero-ctas">
+            <a href="https://wa.me/919012039979?text=Hi%20BabaFoams%2C%20I%20want%20to%20know%20about%20your%20mattresses" class="btn btn-primary" target="_blank">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Order on WhatsApp
+            </a>
+            <a href="#catalogue" class="btn btn-outline">View Catalogue</a>
+        </div>
+    </section>
+
+    <!-- =============================================
+         PRODUCT CATALOGUE
+    ============================================= -->
+    <section id="catalogue" class="section-title">
+        <h2>Our Mattresses</h2>
+        <p>Premium quality foam mattresses at factory-direct prices</p>
+    </section>
+    
+    <p class="image-disclaimer">⚠️ Images are representative only. Actual mattress appearance may vary.</p>
+
+    <main class="product-grid" id="productGrid" role="list">
+        <!-- Products rendered by JavaScript -->
+    </main>
+
+    <!-- =============================================
+         ORDER PAGE OVERLAY
+    ============================================= -->
+    <div class="order-page" id="orderPage" role="dialog" aria-modal="true">
+        <div class="order-header">
+            <button class="order-back" onclick="closeOrderPage()" aria-label="Go back">←</button>
+            <span class="order-product-title" id="orderProductTitle">Product Name</span>
+        </div>
+        
+        <div class="order-content" id="orderFormContainer">
+            <!-- Gallery -->
+            <div class="order-gallery" id="orderGallery">
+                <div class="slider-track" id="orderSliderTrack"></div>
+                <div class="slider-dots" id="orderSliderDots"></div>
+            </div>
+            
+            <!-- Price Display -->
+            <div class="order-form-section">
+                <div class="price-display">
+                    <span class="final-price" id="orderPrice">₹0</span>
+                    <span class="original-price" id="orderOriginalPrice" style="display:none;"></span>
+                    <div class="discount-badge" id="discountBadge" style="display:none;">🎉 10% PREPAID DISCOUNT!</div>
+                </div>
+            </div>
+            
+            <!-- Order Form -->
+            <form id="orderForm" onsubmit="return false;">
+                <!-- Size Selection -->
+                <div class="order-form-section">
+                    <h3>📐 Select Size</h3>
+                    
+                    <div class="size-presets" id="sizePresets">
+                        <button type="button" class="size-preset active" data-w="35" data-l="72">
+                            <strong>Single</strong>35 × 72"
+                        </button>
+                        <button type="button" class="size-preset" data-w="48" data-l="72">
+                            <strong>Double</strong>48 × 72"
+                        </button>
+                        <button type="button" class="size-preset" data-w="60" data-l="75">
+                            <strong>Queen</strong>60 × 75"
+                        </button>
+                        <button type="button" class="size-preset" data-w="72" data-l="78">
+                            <strong>King</strong>72 × 78"
+                        </button>
+                    </div>
+                    
+                    <div class="form-row form-row-3" style="margin-top:16px;">
+                        <div class="form-group">
+                            <label for="sizeWidth">Width (inches)</label>
+                            <select id="sizeWidth" name="width" required>
+                                <option value="30">30"</option>
+                                <option value="35" selected>35"</option>
+                                <option value="36">36"</option>
+                                <option value="48">48"</option>
+                                <option value="60">60"</option>
+                                <option value="72">72"</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="sizeLength">Length (inches)</label>
+                            <select id="sizeLength" name="length" required>
+                                <option value="70">70"</option>
+                                <option value="72" selected>72"</option>
+                                <option value="75">75"</option>
+                                <option value="78">78"</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="sizeThickness">Thickness</label>
+                            <select id="sizeThickness" name="thickness" required>
+                                <option value="4">4"</option>
+                                <option value="5">5"</option>
+                                <option value="6">6"</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="customWidth">Custom Width (optional)</label>
+                        <input type="number" id="customWidth" name="customWidth" min="24" max="84" placeholder="Enter custom width in inches">
+                    </div>
+                </div>
+                
+                <!-- Customer Details -->
+                <div class="order-form-section">
+                    <h3>👤 Your Details</h3>
+                    <div class="form-group">
+                        <label for="customerName">Full Name *</label>
+                        <input type="text" id="customerName" name="name" required placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="customerPhone">Phone Number *</label>
+                        <input type="tel" id="customerPhone" name="phone" required placeholder="10-digit mobile number" pattern="[0-9]{10}" maxlength="10">
+                    </div>
+                    <div class="form-group">
+                        <label for="customerAddress">Delivery Address *</label>
+                        <textarea id="customerAddress" name="address" rows="3" required placeholder="House/Flat No., Street, Landmark, City, PIN Code"></textarea>
+                    </div>
+                </div>
+                
+                <!-- Payment Mode -->
+                <div class="order-form-section">
+                    <h3>💳 Payment Mode</h3>
+                    <div class="payment-options">
+                        <label class="payment-option active" data-payment="cod">
+                            <input type="radio" name="payment" value="cod" checked>
+                            <strong>COD</strong>
+                            <small>Cash on Delivery</small>
+                        </label>
+                        <label class="payment-option" data-payment="prepaid">
+                            <input type="radio" name="payment" value="prepaid">
+                            <strong>PREPAID</strong>
+                            <small>Get 10% OFF!</small>
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Delivery Estimate -->
+                <div class="order-form-section">
+                    <div class="delivery-section">
+                        <h4>🚚 Delivery Estimate</h4>
+                        <div class="form-row">
+                            <div class="form-group" style="margin-bottom:0;">
+                                <label for="deliveryDistance">Distance (km)</label>
+                                <input type="number" id="deliveryDistance" min="0" max="500" value="10" placeholder="Enter distance">
+                            </div>
+                        </div>
+                        <div class="delivery-estimate" id="deliveryEstimate">
+                            Estimated delivery: ₹150
+                        </div>
+                        <p class="delivery-note">* Final delivery charge confirmed after stock & route check via WhatsApp.</p>
+                    </div>
+                </div>
+                
+                <!-- Notes -->
+                <div class="order-form-section">
+                    <div class="form-group">
+                        <label for="orderNotes">Additional Notes (optional)</label>
+                        <textarea id="orderNotes" name="notes" rows="2" placeholder="Any special requirements..."></textarea>
+                    </div>
+                </div>
+                
+                <!-- Submit -->
+                <button type="button" class="btn btn-cta order-submit" onclick="submitOrder()">
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Complete Order on WhatsApp
+                </button>
+            </form>
+        </div>
+        
+        <!-- Confirmation -->
+        <div class="confirmation" id="orderConfirmation">
+            <div class="confirmation-icon">✓</div>
+            <h2>Order Initiated!</h2>
+            <p>We've opened WhatsApp with your order details.<br>Complete the conversation there to confirm your order.</p>
+            <button class="btn btn-cta" onclick="closeOrderPage()" style="margin-top: 24px;">Back to Catalogue</button>
+        </div>
+    </div>
+
+    <!-- =============================================
+         POLICY SECTION
+    ============================================= -->
+    <section class="policy-section" id="policy">
+        <div class="policy-container">
+            <h2>📋 Policies</h2>
+            
+            <!-- Return & Replacement -->
+            <div class="policy-block">
+                <h3>🔄 Return & Replacement Policy</h3>
+                <p><strong>Replacement is available only for:</strong></p>
+                <ul>
+                    <li>Manufacturing defects (stitching issues, foam defects)</li>
+                    <li>Wrong size delivered</li>
+                    <li>Damage during delivery</li>
+                </ul>
+                <p style="margin-top: 16px;"><strong>Important:</strong></p>
+                <ul>
+                    <li>No returns for comfort preference issues (too soft/too hard)</li>
+                    <li>Must report issues within <strong>24 hours</strong> of delivery</li>
+                    <li>Photo/video proof is <strong>required</strong> for all claims</li>
+                    <li>Mattress must be unused and in original packaging for size-related returns</li>
+                </ul>
+            </div>
+            
+            <!-- Warranty -->
+            <div class="policy-block">
+                <h3>🛡️ Warranty Information</h3>
+                <p>Warranty covers manufacturing defects only. Normal wear and tear, misuse, or physical damage is not covered.</p>
+                
+                <table class="warranty-table">
+                    <thead>
+                        <tr>
+                            <th>Model</th>
+                            <th>Warranty Period</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>ComfortLite 4"</td><td>No Warranty</td></tr>
+                        <tr><td>OrthoMax 5"</td><td>5 Years</td></tr>
+                        <tr><td>SolidBond 4"</td><td>5 Years</td></tr>
+                        <tr><td>DualFeel 5"</td><td>5 Years</td></tr>
+                        <tr><td>LightRest 4"</td><td>2 Years</td></tr>
+                        <tr><td>SoftCloud 5"</td><td>2 Years</td></tr>
+                        <tr><td>PrimeRest 5"</td><td>No Warranty</td></tr>
+                        <tr><td>TriSupport 5" & 6"</td><td>5 Years</td></tr>
+                        <tr><td>Foldable BookFold</td><td>1-2 Years</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Image Disclaimer -->
+            <div class="policy-block">
+                <h3>📷 Image Disclaimer</h3>
+                <p>Images on this website are for <strong>representation purposes only</strong>. Actual quilt pattern, color, fabric texture, and overall appearance may vary slightly from what is shown. We strive to display accurate product images, but variations may occur due to manufacturing updates and display settings.</p>
+            </div>
+            
+            <!-- Contact -->
+            <div class="policy-block policy-contact" id="contact">
+                <h3>📞 Contact Us</h3>
+                <p style="margin-bottom: 16px;">Have questions? Reach out to us!</p>
+                <p>📱 WhatsApp: <a href="https://wa.me/919012039979">9012039979</a></p>
+                <p>✉️ Email: <a href="mailto:ayazalvi82@gmail.com">ayazalvi82@gmail.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+         FOOTER
+    ============================================= -->
+    <footer class="footer">
+        <div class="footer-brand">BABAFOAMS</div>
+        <nav class="footer-nav">
+            <a href="#home">Home</a>
+            <a href="#catalogue">Catalogue</a>
+            <a href="#policy">Policy</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="footer-contact">
+            <p>📞 <a href="tel:9012039979">9012039979</a></p>
+            <p>✉️ <a href="mailto:ayazalvi82@gmail.com">ayazalvi82@gmail.com</a></p>
+        </div>
+        <p class="footer-copy">© 2024 BabaFoams. All rights reserved.</p>
+    </footer>
+
+    <!-- =============================================
+         STICKY MOBILE CTA
+    ============================================= -->
+    <div class="sticky-cta" id="stickyCta">
+        <a href="https://wa.me/919012039979?text=Hi%20BabaFoams%2C%20I%20want%20to%20order%20a%20mattress" class="btn btn-cta" target="_blank">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Order on WhatsApp
+        </a>
+    </div>
+
+    <!-- =============================================
+         TOAST
+    ============================================= -->
+    <div class="toast" id="toast">Order started — check your WhatsApp!</div>
+
+    <!-- =============================================
+         JAVASCRIPT
+    ============================================= -->
+    <script>
+        /* =============================================
+           CONFIGURATION - EDIT THESE VALUES
+        ============================================= */
+        
+        // WhatsApp Business Number (without +)
+        const WHATSAPP_NUMBER = "919012039979";
+        
+        // Webhook URL - Google Apps Script endpoint
+        const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbytqExds_7IueTjOPXeClQS3uhvYbTN2unNoOv8iwATXG7vtMW3KqLJspZG-VgO0imw/exec";
+        
+        // Base delivery charge
+        const BASE_DELIVERY = 100;
+        
+        /* =============================================
+           PRODUCTS DATA
+           All image paths use /assets/<filename>.png
+        ============================================= */
+        const products = [
+            {
+                id: "comfortlite4",
+                name: "ComfortLite 4\"",
+                sku: "ComfortLite4",
+                thickness: "4",
+                material: "3\" EP + 1\" Foam",
+                warranty: "No Warranty",
+                priceFrom: 2149,
+                features: ["3\" EP Base", "1\" Soft Foam Top", "Budget Friendly"],
+                images: ["/assets/comfortlite-1.png", "/assets/comfortlite-2.png"]
+            },
+            {
+                id: "orthomax5",
+                name: "OrthoMax 5\"",
+                sku: "OrthoMax5",
+                thickness: "5",
+                material: "4\" Bonded + 1\" Foam",
+                warranty: "5 Years",
+                priceFrom: 5749,
+                features: ["4\" Bonded Foam Base", "1\" Comfort Layer", "Ortho Support"],
+                images: ["/assets/orthomax-1.png", "/assets/orthomax-2.png"]
+            },
+            {
+                id: "solidbond4",
+                name: "SolidBond 4\"",
+                sku: "SolidBond4",
+                thickness: "4",
+                material: "100% Bonded Foam",
+                warranty: "5 Years",
+                priceFrom: 4999,
+                features: ["Pure Bonded Foam", "Extra Firm Support", "5-Year Warranty"],
+                images: ["/assets/solidbond-1.png", "/assets/solidbond-2.png"]
+            },
+            {
+                id: "dualfeel5",
+                name: "DualFeel 5\"",
+                sku: "DualFeel5",
+                thickness: "5",
+                material: "2\" Bonded + 3\" Softy",
+                warranty: "5 Years",
+                priceFrom: 4299,
+                features: ["2\" Bonded Base", "3\" Softy Top", "Dual Comfort"],
+                images: ["/assets/dualfeel-1.png", "/assets/dualfeel-2.png"]
+            },
+            {
+                id: "lightrest4",
+                name: "LightRest 4\"",
+                sku: "LightRest4",
+                thickness: "4",
+                material: "2\" EP + 2\" Foam",
+                warranty: "2 Years",
+                priceFrom: 2149,
+                features: ["2\" EP Layer", "2\" Foam Layer", "Lightweight"],
+                images: ["/assets/lightrest-1.png", "/assets/lightrest-2.png"]
+            },
+            {
+                id: "softcloud5",
+                name: "SoftCloud 5\"",
+                sku: "SoftCloud5",
+                thickness: "5",
+                material: "2\" EP + 3\" Softy",
+                warranty: "2 Years",
+                priceFrom: 3599,
+                features: ["2\" EP Base", "3\" Ultra Soft Top", "Cloud-like Feel"],
+                images: ["/assets/softcloud-1.png", "/assets/softcloud-2.png"]
+            },
+            {
+                id: "primerest5",
+                name: "PrimeRest 5\"",
+                sku: "PrimeRest5",
+                thickness: "5",
+                material: "4\" EP + 1\" Foam",
+                warranty: "No Warranty",
+                priceFrom: 2879,
+                features: ["4\" EP Core", "1\" Foam Top", "Best Value"],
+                images: ["/assets/primerest-1.png", "/assets/primerest-2.png"]
+            },
+            {
+                id: "trisupport5",
+                name: "TriSupport 5\"",
+                sku: "TriSupport5",
+                thickness: "5",
+                material: "Hybrid 3-Layer",
+                warranty: "5 Years",
+                priceFrom: 3599,
+                features: ["3-Layer Design", "Hybrid Support", "Balanced Comfort"],
+                images: ["/assets/trisupport5-1.png", "/assets/trisupport5-2.png"]
+            },
+            {
+                id: "trisupport6",
+                name: "TriSupport 6\"",
+                sku: "TriSupport6",
+                thickness: "6",
+                material: "Hybrid Plus",
+                warranty: "5 Years",
+                priceFrom: 5999,
+                features: ["3-Layer + Extra 1\"", "Premium Hybrid", "Maximum Comfort"],
+                images: ["/assets/trisupport6-1.png", "/assets/trisupport6-2.png"]
+            },
+            {
+                id: "bookfold",
+                name: "Foldable BookFold",
+                sku: "BookFold",
+                thickness: "4",
+                material: "Foldable Models Available",
+                warranty: "1-2 Years",
+                priceFrom: 2499,
+                foldable: true,
+                features: ["Tri-Fold Design", "Easy Storage", "Multiple Sizes: 4\", 5\", 6\""],
+                images: ["/assets/bookfold-1.png", "/assets/bookfold-2.png"]
+            }
+        ];
+        
+        /* =============================================
+           STATE
+        ============================================= */
+        let currentProduct = null;
+        let paymentMode = 'cod';
+        let deliveryCharge = BASE_DELIVERY;
+        
+        /* =============================================
+           MOBILE MENU
+        ============================================= */
+        function toggleMobileMenu() {
+            document.getElementById('mobileNav').classList.toggle('active');
+        }
+        
+        function closeMobileMenu() {
+            document.getElementById('mobileNav').classList.remove('active');
+        }
+        
+        /* =============================================
+           FORMAT PRICE
+        ============================================= */
+        function displayPrice(price) {
+            return '₹' + price.toLocaleString('en-IN');
+        }
+        
+        /* =============================================
+           RENDER PRODUCTS
+        ============================================= */
+        function renderProducts() {
+            const grid = document.getElementById('productGrid');
+            
+            grid.innerHTML = products.map((p) => `
+                <article class="product-card" data-product-id="${p.id}">
+                    <div class="product-slider" data-slider="${p.id}">
+                        <div class="slider-track">
+                            ${p.images.map((img, i) => `
+                                <div class="slider-slide">
+                                    <img src="${img}" alt="${p.name} image ${i+1}" onerror="this.classList.add('img-error'); this.alt='${p.name}';">
+                                </div>
+                            `).join('')}
+                        </div>
+                        <div class="slider-dots">
+                            ${p.images.map((_, i) => `
+                                <button class="slider-dot ${i === 0 ? 'active' : ''}" data-slide="${i}" aria-label="Slide ${i+1}"></button>
+                            `).join('')}
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">${p.name}</h3>
+                        <p class="product-material">${p.material}</p>
+                        <div class="product-price">
+                            ${displayPrice(p.priceFrom)}
+                            <span>onwards</span>
+                        </div>
+                        <ul class="product-features">
+                            ${p.features.map(f => `<li>${f}</li>`).join('')}
+                        </ul>
+                        <div class="badges">
+                            <span class="badge ${p.warranty !== 'No Warranty' ? 'badge-warranty' : 'badge-highlight'}">
+                                ${p.warranty}
+                            </span>
+                            ${p.foldable ? '<span class="badge badge-foldable">Foldable</span>' : ''}
+                            <span class="badge badge-highlight">All Sizes</span>
+                        </div>
+                        <div class="card-buttons">
+                            <button class="btn btn-cta" onclick="openOrderPage('${p.id}')">Order</button>
+                            <button class="btn btn-secondary" onclick="openOrderPage('${p.id}')">Details</button>
+                        </div>
+                    </div>
+                </article>
+            `).join('');
+            
+            initializeSliders();
+        }
+        
+        /* =============================================
+           SLIDER - Swipe & Drag, No Arrows
+        ============================================= */
+        function initializeSliders() {
+            document.querySelectorAll('.product-slider, .order-gallery').forEach(slider => {
+                const track = slider.querySelector('.slider-track');
+                const dots = slider.querySelectorAll('.slider-dot');
+                const slides = slider.querySelectorAll('.slider-slide');
+                
+                if (slides.length <= 1) return;
+                
+                let currentSlide = 0;
+                let startX = 0;
+                let currentX = 0;
+                let isDragging = false;
+                
+                function goToSlide(index) {
+                    currentSlide = Math.max(0, Math.min(index, slides.length - 1));
+                    track.style.transform = `translateX(-${currentSlide * 100}%)`;
+                    dots.forEach((dot, i) => dot.classList.toggle('active', i === currentSlide));
+                }
+                
+                // Dot clicks
+                dots.forEach((dot, i) => {
+                    dot.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        goToSlide(i);
+                    });
+                });
+                
+                // Touch events
+                slider.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX;
+                    isDragging = true;
+                }, { passive: true });
+                
+                slider.addEventListener('touchmove', (e) => {
+                    if (!isDragging) return;
+                    currentX = e.touches[0].clientX;
+                }, { passive: true });
+                
+                slider.addEventListener('touchend', () => {
+                    if (!isDragging) return;
+                    isDragging = false;
+                    const diff = startX - currentX;
+                    if (Math.abs(diff) > 50) {
+                        goToSlide(diff > 0 ? currentSlide + 1 : currentSlide - 1);
+                    }
+                });
+                
+                // Mouse drag for desktop
+                slider.addEventListener('mousedown', (e) => {
+                    startX = e.clientX;
+                    isDragging = true;
+                    e.preventDefault();
+                });
+                
+                slider.addEventListener('mousemove', (e) => {
+                    if (!isDragging) return;
+                    currentX = e.clientX;
+                });
+                
+                slider.addEventListener('mouseup', () => {
+                    if (!isDragging) return;
+                    isDragging = false;
+                    const diff = startX - currentX;
+                    if (Math.abs(diff) > 50) {
+                        goToSlide(diff > 0 ? currentSlide + 1 : currentSlide - 1);
+                    }
+                });
+                
+                slider.addEventListener('mouseleave', () => {
+                    isDragging = false;
+                });
+                
+                // Keyboard
+                slider.setAttribute('tabindex', '0');
+                slider.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowLeft') goToSlide(currentSlide - 1);
+                    if (e.key === 'ArrowRight') goToSlide(currentSlide + 1);
+                });
+            });
+        }
+        
+        /* =============================================
+           ORDER PAGE
+        ============================================= */
+        function openOrderPage(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+            
+            currentProduct = product;
+            
+            document.getElementById('orderProductTitle').textContent = product.name;
+            document.getElementById('sizeThickness').value = product.thickness;
+            
+            // Render gallery
+            const galleryTrack = document.getElementById('orderSliderTrack');
+            const galleryDots = document.getElementById('orderSliderDots');
+            
+            galleryTrack.innerHTML = product.images.map((img, i) => `
+                <div class="slider-slide">
+                    <img src="${img}" alt="${product.name} image ${i+1}" onerror="this.classList.add('img-error'); this.alt='${product.name}';">
+                </div>
+            `).join('');
+            
+            galleryDots.innerHTML = product.images.map((_, i) => `
+                <button class="slider-dot ${i === 0 ? 'active' : ''}" data-slide="${i}"></button>
+            `).join('');
+            
+            // Reset form
+            document.getElementById('orderForm').reset();
+            document.getElementById('sizeThickness').value = product.thickness;
+            document.getElementById('sizeWidth').value = "35";
+            document.getElementById('sizeLength').value = "72";
+            document.getElementById('deliveryDistance').value = "10";
+            
+            paymentMode = 'cod';
+            document.querySelectorAll('.payment-option').forEach(opt => {
+                opt.classList.toggle('active', opt.dataset.payment === 'cod');
+            });
+            
+            calculateDelivery();
+            updatePrice();
+            
+            // Reset presets
+            document.querySelectorAll('.size-preset').forEach(btn => btn.classList.remove('active'));
+            document.querySelector('.size-preset[data-w="35"]').classList.add('active');
+            
+            // Show page
+            document.getElementById('orderPage').classList.add('active');
+            document.getElementById('orderFormContainer').style.display = 'block';
+            document.getElementById('orderConfirmation').classList.remove('active');
+            document.body.style.overflow = 'hidden';
+            
+            setTimeout(() => initializeSliders(), 100);
+        }
+        
+        function closeOrderPage() {
+            document.getElementById('orderPage').classList.remove('active');
+            document.body.style.overflow = '';
+            currentProduct = null;
+        }
+        
+        // Size presets
+        document.querySelectorAll('.size-preset').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.size-preset').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                document.getElementById('sizeWidth').value = this.dataset.w;
+                document.getElementById('sizeLength').value = this.dataset.l;
+                document.getElementById('customWidth').value = '';
+                updatePrice();
+            });
+        });
+        
+        // Watch size changes
+        ['sizeWidth', 'sizeLength', 'sizeThickness', 'customWidth'].forEach(id => {
+            document.getElementById(id).addEventListener('change', () => {
+                document.querySelectorAll('.size-preset').forEach(b => b.classList.remove('active'));
+                updatePrice();
+            });
+        });
+        
+        // Payment selection
+        document.querySelectorAll('.payment-option').forEach(opt => {
+            opt.addEventListener('click', function() {
+                paymentMode = this.dataset.payment;
+                document.querySelectorAll('.payment-option').forEach(o => o.classList.remove('active'));
+                this.classList.add('active');
+                updatePrice();
+            });
+        });
+        
+        // Delivery distance
+        document.getElementById('deliveryDistance').addEventListener('input', calculateDelivery);
+        
+        /* =============================================
+           PRICE CALCULATION
+        ============================================= */
+        function updatePrice() {
+            if (!currentProduct) return;
+            
+            const customWidth = document.getElementById('customWidth').value;
+            const width = customWidth ? parseInt(customWidth) : parseInt(document.getElementById('sizeWidth').value) || 35;
+            const length = parseInt(document.getElementById('sizeLength').value) || 72;
+            
+            // Scale by area (35x72 = base)
+            const baseArea = 35 * 72;
+            const orderArea = width * length;
+            const scaleFactor = orderArea / baseArea;
+            
+            let price = Math.round(currentProduct.priceFrom * scaleFactor);
+            const originalPrice = price;
+            let finalPrice = price;
+            
+            if (paymentMode === 'prepaid') {
+                finalPrice = Math.round(price * 0.9);
+                document.getElementById('orderOriginalPrice').textContent = displayPrice(originalPrice);
+                document.getElementById('orderOriginalPrice').style.display = 'inline';
+                document.getElementById('discountBadge').style.display = 'inline-block';
+            } else {
+                document.getElementById('orderOriginalPrice').style.display = 'none';
+                document.getElementById('discountBadge').style.display = 'none';
+            }
+            
+            document.getElementById('orderPrice').textContent = displayPrice(finalPrice);
+        }
+        
+        /* =============================================
+           DELIVERY CALCULATION
+           Formula: base + ceil(km/10) * 50
+        ============================================= */
+        function calculateDelivery() {
+            const distance = parseInt(document.getElementById('deliveryDistance').value) || 0;
+            deliveryCharge = BASE_DELIVERY + Math.max(0, Math.ceil(distance / 10)) * 50;
+            document.getElementById('deliveryEstimate').innerHTML = 
+                `Estimated delivery: <strong>${displayPrice(deliveryCharge)}</strong>`;
+        }
+        
+        /* =============================================
+           FORM VALIDATION
+        ============================================= */
+        function validateForm() {
+            const name = document.getElementById('customerName').value.trim();
+            const phone = document.getElementById('customerPhone').value.trim();
+            const address = document.getElementById('customerAddress').value.trim();
+            
+            if (!name) {
+                alert('Please enter your full name');
+                document.getElementById('customerName').focus();
+                return false;
+            }
+            if (!phone || !/^[0-9]{10}$/.test(phone)) {
+                alert('Please enter a valid 10-digit phone number');
+                document.getElementById('customerPhone').focus();
+                return false;
+            }
+            if (!address || address.length < 15) {
+                alert('Please enter your complete delivery address');
+                document.getElementById('customerAddress').focus();
+                return false;
+            }
+            return true;
+        }
+        
+        /* =============================================
+           SUBMIT ORDER
+        ============================================= */
+        function submitOrder() {
+            if (!currentProduct) return;
+            if (!validateForm()) return;
+            
+            // Gather data
+            const customWidth = document.getElementById('customWidth').value;
+            const width = customWidth || document.getElementById('sizeWidth').value;
+            const length = document.getElementById('sizeLength').value;
+            const thickness = document.getElementById('sizeThickness').value;
+            const name = document.getElementById('customerName').value.trim();
+            const phone = document.getElementById('customerPhone').value.trim();
+            const address = document.getElementById('customerAddress').value.trim();
+            const notes = document.getElementById('orderNotes').value.trim();
+            
+            // Calculate final price
+            const baseArea = 35 * 72;
+            const orderArea = parseInt(width) * parseInt(length);
+            const scaleFactor = orderArea / baseArea;
+            let price = Math.round(currentProduct.priceFrom * scaleFactor);
+            
+            let finalPrice = price;
+            let paymentText = 'COD (Cash on Delivery)';
+            
+            if (paymentMode === 'prepaid') {
+                finalPrice = Math.round(price * 0.9);
+                paymentText = `PREPAID (${displayPrice(finalPrice)}) — 10% discount applied`;
+            } else {
+                paymentText = `COD (${displayPrice(finalPrice)})`;
+            }
+            
+            // Size label
+            let sizeLabel = 'Custom';
+            if (width == 35 && length == 72) sizeLabel = 'Single';
+            else if (width == 48 && length == 72) sizeLabel = 'Double';
+            else if (width == 60 && length == 75) sizeLabel = 'Queen';
+            else if (width == 72 && length == 78) sizeLabel = 'King';
+            
+            // WhatsApp message
+            const message = `Hello BabaFoams — I want to order:
+
+Product: ${currentProduct.name}
+SKU: ${currentProduct.sku}
+Size: ${width} × ${length}" (W × L) — ${sizeLabel}
+Thickness: ${thickness}"
+Payment: ${paymentText}
+
+Name: ${name}
+Phone: ${phone}
+Address: ${address}
+
+Delivery estimate: ${displayPrice(deliveryCharge)} (final charge subject to confirmation)
+${notes ? `Notes: ${notes}` : ''}`;
+
+            const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+            
+            // Webhook payload
+            const orderData = {
+                order: {
+                    product: currentProduct.name,
+                    sku: currentProduct.sku,
+                    size: `${width} × ${length} × ${thickness}"`,
+                    sizeLabel: sizeLabel,
+                    paymentMode: paymentMode,
+                    price: finalPrice,
+                    originalPrice: price,
+                    discount: paymentMode === 'prepaid' ? '10%' : 'None',
+                    customer: { name, phone, address },
+                    deliveryEstimate: deliveryCharge,
+                    notes: notes,
+                    timestamp: new Date().toISOString()
+                }
+            };
+            
+            // Send webhook (non-blocking)
+            fetch(WEBHOOK_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(orderData)
+            })
+            .then(res => console.log('Webhook sent:', res.status))
+            .catch(err => console.log('Webhook failed (expected with placeholder URL):', err.message));
+            
+            // Open WhatsApp
+            window.open(whatsappUrl, '_blank');
+            
+            // Show confirmation
+            document.getElementById('orderFormContainer').style.display = 'none';
+            document.getElementById('orderConfirmation').classList.add('active');
+            
+            showToast();
+        }
+        
+        /* =============================================
+           TOAST
+        ============================================= */
+        function showToast() {
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 4000);
+        }
+        
+        /* =============================================
+           STICKY CTA
+        ============================================= */
+        function handleStickyCta() {
+            const hero = document.querySelector('.hero');
+            const stickyCta = document.getElementById('stickyCta');
+            const heroBottom = hero.getBoundingClientRect().bottom;
+            
+            if (window.innerWidth <= 768 && heroBottom < 0) {
+                stickyCta.classList.add('visible');
+            } else {
+                stickyCta.classList.remove('visible');
+            }
+        }
+        
+        window.addEventListener('scroll', handleStickyCta, { passive: true });
+        window.addEventListener('resize', handleStickyCta, { passive: true });
+        
+        /* =============================================
+           ESCAPE KEY
+        ============================================= */
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeOrderPage();
+        });
+        
+        /* =============================================
+           INIT
+        ============================================= */
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProducts();
+            handleStickyCta();
+        });
+    </script>
+
+</body>
+</html>
